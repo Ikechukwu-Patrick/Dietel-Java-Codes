@@ -1,15 +1,19 @@
-java.util.Arrays;
 import java.util.Scanner;
 
+import java.util.Arrays;
 
-public class Mbti {
+public class MyersBriggsTypeIndicators {
+
     public static void main(String[] args) {
 
 
         Scanner input = new Scanner(System.in);
 
+	System.out.println("Please bear in mind that in this tests there's no Right and Wrong answers, but be thinking before you pick your answers:");
 
-        String[] optionA = {
+		System.out.println("########################################################################:");
+
+        String[] roundA = {
                 "A. expand energy, enjoy groups",
                 "A. more outgoing, think out loud",
                 "A. seek many task, public activities, interact with others",
@@ -32,7 +36,7 @@ public class Mbti {
                 "A. facts, things, what is",
         };
 
-        String[] optionB = {
+        String[] roundB = {
                 "B. conserve energy",
                 "B. more reserved, think to yourself",
                 "B. seek private, solitary activities with quiet to concentrate",
@@ -60,47 +64,47 @@ public class Mbti {
         String[] answerB = {"I", "N", "F", "P"};
         String[][] answerBook = new String[4][5];
         for (int E = 0; E < 5; E++) {
-            System.out.println(optionA[E] + "\t\t" + optionB[E]);
+            System.out.println(roundA[E] + "\t\t" + roundB[E]);
             answer = input.next();
 
             if (answer.equalsIgnoreCase("a")) {
-                answerBook[0][E] = answer + optionA[E];
+                answerBook[0][E] = answer + roundA[E];
             } else if (answer.equalsIgnoreCase("b")) {
 
-                answerBook[0][E] = answer + optionB[E];
+                answerBook[0][E] = answer + roundB[E];
 
             }
             while (!answer.equals("a") && !answer.equals("b")) {
-                System.out.println(optionA[E] + "\t\t" + optionB[E]);
+                System.out.println(roundA[E] + "\t\t" + roundB[E]);
                 answer = input.next();
 
                 if (answer.equalsIgnoreCase("a")) {
-                    answerBook[0][E] = answer + optionA[E];
+                    answerBook[0][E] = answer + roundA[E];
                 } else if (answer.equalsIgnoreCase("b")) {
-                    answerBook[0][E] = answer + optionB[E];
+                    answerBook[0][E] = answer + roundB[E];
 
                 }
             }
         }
         int count = 0;
         for (int T = 5; T < 10; T++) {
-            System.out.println(optionA[T] + "\t\t" + optionB[T]);
+            System.out.println(roundA[T] + "\t\t" + roundB[T]);
             answer = input.next();
 
             if (answer.equalsIgnoreCase("a")) {
-                answerBook[1][count] = answer + optionA[T];
+                answerBook[1][count] = answer + roundA[T];
             } else if (answer.equalsIgnoreCase("b")) {
-                answerBook[1][count] = answer + optionB[T];
+                answerBook[1][count] = answer + roundB[T];
             }
             count++;
             while (!answer.equals("a") && !answer.equals("b")) {
-                System.out.println(optionA[T] + "\t\t" + optionB[T]);
+                System.out.println(roundA[T] + "\t\t" + roundB[T]);
                 answer = input.next();
 
                 if (answer.equalsIgnoreCase("a")) {
-                    answerBook[1][count] = answer + optionA[T];
+                    answerBook[1][count] = answer + roundA[T];
                 } else if (answer.equalsIgnoreCase("b")) {
-                    answerBook[1][count] = answer + optionB[T];
+                    answerBook[1][count] = answer + roundB[T];
 
                 }
             }
@@ -108,41 +112,41 @@ public class Mbti {
         }
         count = 0;
         for (int J = 10; J < 15; J++) {
-            System.out.println(optionA[J] + "\t\t" + optionB[J]);
+            System.out.println(roundA[J] + "\t\t" + roundB[J]);
             answer = input.next();
             if (answer.equalsIgnoreCase("a")) {
-                answerBook[2][count] = answer + optionA[J];
+                answerBook[2][count] = answer + roundA[J];
             } else if (answer.equalsIgnoreCase("b")) {
-                answerBook[2][count] = answer + optionB[J];
+                answerBook[2][count] = answer + roundB[J];
             }
             count++;
             while (!answer.equals("a") && !answer.equals("b")) {
-                System.out.println(optionA[J] + "\t\t" + optionB[J]);
+                System.out.println(roundA[J] + "\t\t" + roundB[J]);
                 answer = input.next();
                 if (answer.equalsIgnoreCase("a")) {
-                    answerBook[2][count] = answer + optionA[J];
+                    answerBook[2][count] = answer + roundA[J];
                 } else if (answer.equalsIgnoreCase("b")) {
-                    answerBook[2][count] = answer + optionB[J];
+                    answerBook[2][count] = answer + roundB[J];
                 }
             }
         }
         count = 0;
         for (int S = 15; S < 20; S++) {
-            System.out.println(optionA[S] + "\t\t" + optionB[S]);
+            System.out.println(roundA[S] + "\t\t" + roundB[S]);
             answer = input.next();
             if (answer.equalsIgnoreCase("a")) {
-                answerBook[3][count] = answer + optionA[S];
+                answerBook[3][count] = answer + roundA[S];
             } else if (answer.equalsIgnoreCase("b")) {
-                answerBook[3][count] = answer + optionB[S];
+                answerBook[3][count] = answer + roundB[S];
             }
             count++;
             while (!answer.equals("a") && !answer.equals("b")) {
-                System.out.println(optionA[S] + "\t\t" + optionB[S]);
+                System.out.println(roundA[S] + "\t\t" + roundB[S]);
                 answer = input.next();
                 if (answer.equalsIgnoreCase("a")) {
-                    answerBook[3][count] = answer + optionA[S];
+                    answerBook[3][count] = answer + roundA[S];
                 } else if (answer.equalsIgnoreCase("b")) {
-                    answerBook[3][count] = answer + optionB[S];
+                    answerBook[3][count] = answer + roundB[S];
                 }
             }
         }
